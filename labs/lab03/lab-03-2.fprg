@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lab-03-2"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-22 12:14:47 PM"/>
+        <attribute name="created" value="dXNlcjtMQVBUT1AtODlPRzlNOEE7MjAyNS0wNy0yMjsxMTo1OTo1OSBBTTsyNzUz"/>
+        <attribute name="edited" value="dXNlcjtMQVBUT1AtODlPRzlNOEE7MjAyNS0wNy0yMjsxMjoxNDo0NyBQTTsyOzI4NjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nights" type="Integer" array="False" size=""/>
+            <input variable="nights"/>
+            <declare name="totalPayment" type="Integer" array="False" size=""/>
+            <assign variable="totalPayment" expression="250 * 0.15 * nights"/>
+            <output expression="totalPayment" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
