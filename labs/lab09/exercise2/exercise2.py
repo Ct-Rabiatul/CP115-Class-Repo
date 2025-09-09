@@ -4,35 +4,37 @@ overtime_hours = int(input())
 tax_status = input()
 
 # TODO your code here
-if  tax_status == "single" :
-    if base_salary >= 5000 :
-        tax_rate = 0.22
-    else :
-        tax_rate = 0.18
-elif tax_status == "married" :
-    if base_salary >= 6000 :
-        tax_rate = 0.20
-    else :
-        tax_rate = 0.15
+if  tax_status == "Single" and base_salary >= 5000 :
+    tax_rate = 0.22
+elif tax_status == "Single" and base_salary <= 5000 :
+    tax_rate = 0.18
+elif tax_status == "Married" and base_salary >= 6000 :
+    tax_rate = 0.20
+elif tax_status == "Married" and base_salary >= 6000 :
+    tax_rate = 0.15
+elif tax_status == "Head" and base_salary >= 5500 :
+    tax_rate = 0.25
 else :
-    tax_status == "head"
-    if base_salary >= 5500 :
-        tax_rate = 0.25
-    else :
-        tax_rate = 0.19
+    tax_rate = 0.19
+
+#Overtime pay
+overtime_pay = overtime_hours * 35
+
+total_salary = base_salary + overtime_pay
 
 #Tax Deductions
-tax_amount = base_salary * tax_rate
+tax_amount = total_salary * tax_rate
 
 #After Tax Deductions
-after_tax = base_salary + tax_amount
+after_tax = total_salary - tax_amount
 
 #Additional Deductions
-epf = base_salary * 0.11 * 0.005
+epf = after_tax * 0.11
+socso = after_tax * 0.005
 
-total_deduction = tax_amount + epf
+total_deduction = tax_amount + epf + socso
 
-net_salary = base_salary - total_deduction
+net_salary = total_salary - total_deduction
 
 print(employee_name)
 print(tax_rate)
