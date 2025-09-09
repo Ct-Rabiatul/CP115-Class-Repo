@@ -4,7 +4,6 @@ customer_type = input()
 is_student = input()
 
 # TODO your code here
-if day_type == "weekeng"
 
 print(base_price)
 print(final_price)
