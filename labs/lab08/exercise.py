@@ -1,11 +1,15 @@
-# Order matters in sequential programming
-name = "Ali"
-age = 20
-student_id = "2024001"
+# Test division - always returns float
+division = 10 / 2
+print(f"10 / 2 = {division} (type: {type(division)})")
 
-# Build information step by step
-full_info = f"Name: {name}"
-full_info = full_info + f", Age: {age}"
-full_info = full_info + f", ID: {student_id}"
+# Test floor division - returns int when both operands are int
+floor_div = 10 // 3
+print(f"10 // 3 = {floor_div} (type: {type(floor_div)})")
 
-print(full_info)
+# Test modulus - returns int when both operands are int
+modulus = 17 % 5
+print(f"17 % 5 = {modulus} (type: {type(modulus)})")
+
+# Test exponentiation - returns int when both operands are int
+power = 2 ** 3
+print(f"2 ** 3 = {power} (type: {type(power)})")
